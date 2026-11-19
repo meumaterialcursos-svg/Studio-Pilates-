@@ -1,0 +1,14 @@
+{
+  "name": "studio-pilates-firebase",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Infraestrutura Firebase Hosting, Realtime Database e Storage para Studio Pilates",
+  "scripts": {
+    "deploy": "firebase deploy",
+    "deploy:hosting": "firebase deploy --only hosting",
+    "deploy:rules": "firebase deploy --only database,storage"
+  },
+  "devDependencies": {
+    "firebase-tools": "^14.0.0"
+  }
+}

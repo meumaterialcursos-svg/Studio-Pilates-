@@ -1,0 +1,21 @@
+{
+  "rules": {
+    ".read": false,
+    ".write": false,
+    "users": {
+      "$uid": {
+        ".read": "auth != null && auth.uid === $uid",
+        ".write": "auth != null && auth.uid === $uid",
+        "studioData": {
+          ".validate": "newData.hasChildren(['updatedAt','payload'])",
+          "payload": {
+            ".validate": "newData.isString() && newData.val().length <= 10000000"
+          },
+          "updatedAt": {
+            ".validate": "newData.isNumber()"
+          }
+        }
+      }
+    }
+  }
+}
